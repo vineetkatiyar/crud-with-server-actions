@@ -15,15 +15,18 @@ seetProduct();
 
 export const getDetails = async (query?: string) => {
   if (query) {
-    await prisma.details.findMany({
+    return await prisma.details.findMany({
       where: {
-        OR: [{ name: { contains: query } }, { email: { contains: query } }],
+        OR: [
+          { name: { contains: query, mode: 'insensitive' } },
+          { email: { contains: query, mode: 'insensitive' } },
+        ],
       },
     });
   }
   return await prisma.details.findMany();
-
 };
+
 
 export const getDetail = async (id: string) => {
   return await prisma.details.findUnique({
