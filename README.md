@@ -14,4 +14,5 @@
 5. PostgreSQL
 6. useActionState
 7. useOptimistic 
+8. TailwindCSS
 
