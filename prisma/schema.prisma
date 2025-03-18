@@ -9,8 +9,8 @@ datasource db {
 }
 
 model Details {
-  id        String   @id @default(uuid())
-  name      String
-  email     String   @unique
-  phone     String
+  id    String @id @default(uuid())
+  name  String
+  email String @unique
+  phone String
 }

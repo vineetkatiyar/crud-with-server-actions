@@ -18,15 +18,14 @@ export const getDetails = async (query?: string) => {
     return await prisma.details.findMany({
       where: {
         OR: [
-          { name: { contains: query, mode: 'insensitive' } },
-          { email: { contains: query, mode: 'insensitive' } },
+          { name: { contains: query, mode: "insensitive" } },
+          { email: { contains: query, mode: "insensitive" } },
         ],
       },
     });
   }
   return await prisma.details.findMany();
 };
-
 
 export const getDetail = async (id: string) => {
   return await prisma.details.findUnique({

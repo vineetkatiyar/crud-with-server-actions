@@ -15,7 +15,7 @@ export function UserForm() {
   const [state, formAction, pending] = useActionState(createUser, initialState);
 
   return (
-    <div className="">
+    <div className="py-24 border">
       <Form
         action={formAction}
         className="space-y-6 w-full flex flex-col items-center justify-center"

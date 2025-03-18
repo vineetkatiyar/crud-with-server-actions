@@ -1,4 +1,5 @@
 import Form from "next/form";
+import { Button } from "./ui/button";
 
 export function SearchQuery() {
   return (
@@ -9,12 +10,12 @@ export function SearchQuery() {
         className="flex-1 px-4 py-2 rounded-lg border border-gray-400 focus:outline-none"
         placeholder="Search product"
       />
-      <button
+      <Button
         type="submit"
-        className="px-4 py-2 bg-gray-600 rounded-lg hover:bg-blue-500 focus:outline-none text-white"
+        className="px-4 py-2 bg-gray-600 rounded-lg focus:outline-none text-white"
       >
         Search
-      </button>
+      </Button>
     </Form>
   );
 }

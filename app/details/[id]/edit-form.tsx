@@ -20,7 +20,7 @@ export function EditUserDetail({ user }: { user: User }) {
   );
 
   return (
-    <div className="">
+    <div className="py-24">
       <form
         action={formAction}
         className="space-y-6 w-full flex flex-col items-center justify-center"
